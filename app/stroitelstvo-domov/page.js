@@ -19,7 +19,27 @@ export const metadata = {
 const page = () => {
 	return (
 		<main className="">
-			<section className='flex bg-cover min-h-screen' style={{ backgroundImage: 'url("/images/stroitelstvo-domov/fon.webp")' }}>
+			<section className='bg-cover min-h-screen xz:hidden sd:flex' style={{ backgroundImage: `url("/images/stroitelstvo-domov/fon.webp")` }}>
+				<div className='sd:w-[248px] xz:w-14 border-r min-h-screen relative'>
+					<Social />
+
+					<div className='w-8 h-8 bg-primary absolute xz:top-14 sd:top-20 right-0' />
+				</div>
+				<div className='pt-40 sd:pl-5 xz:pl-3'>
+					<h1 className='sd:text-7xl xz:text-4xl text-white font-bold'>
+						Строительство <span className="sd:text-6xl xz:text-3xl block">
+							домов
+						</span>
+					</h1>
+
+					<button className="btn btn-primary sd:w-72 xz:w-64 sd:btn-lg xz:btn-md shadow-2xl rounded-none mt-16 uppercase">
+						Напишите нам
+					</button>
+
+				</div>
+			</section>
+
+			<section className='bg-cover min-h-screen xz:flex sd:hidden' style={{ backgroundImage: `url("/images/stroitelstvo-domov/fon-xz.avif")` }}>
 				<div className='sd:w-[248px] xz:w-14 border-r min-h-screen relative'>
 					<Social />
 

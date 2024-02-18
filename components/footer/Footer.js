@@ -6,7 +6,7 @@ export const Footer = () => {
 	const pathname = usePathname()
 
 	return (
-		<footer className={`bg-[#1A1A1A] z-50 relative ${pathname === '/kontakty' ? 'hidden' : 'block'}`}>
+		<footer className={`bg-[#1A1A1A] z-30 relative ${pathname === '/kontakty' ? 'hidden' : 'block'}`}>
 
 			<div className='flex justify-center'>
 				<div className='sd:block xz:hidden w-1/2'>

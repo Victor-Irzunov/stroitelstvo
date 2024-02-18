@@ -66,7 +66,7 @@ const DesignHouses = () => {
 							</div>
 						</div>
 					</div>
-					<div className='flex justify-center'>
+					<div className='flex justify-center mt-7'>
 						<button className="btn btn-primary sd:w-96 xz:w-64 btn-lg shadow-2xl rounded-none mt-0 uppercase">
 							Получить консультацию
 						</button>

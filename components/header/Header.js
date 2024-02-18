@@ -16,16 +16,12 @@ export const Header = () => {
 	}, [pathname]);
 
 	const toggleMenu = () => {
-		console.log('-------')
 		setMenuOpen(!isMenuOpen);
 	};
 
 	const closeMenu = () => {
 		setMenuOpen(false);
 	};
-
-
-
 
 	return (
 		<header className="border-b fixed top-0 right-0 left-0 bg-white/40 backdrop-blur-md z-40">
@@ -91,7 +87,7 @@ export const Header = () => {
 						initial={{ x: "100%" }}
 						animate={{ x: 0 }}
 						exit={{ x: "100%" }}
-						className={`fixed top-0 right-0 w-screen h-screen bg-black bg-opacity-95 text-white flex items-center justify-center sd:w-1/2 xz:w-full`}
+						className={`fixed top-0 z-50 right-0 w-screen h-screen bg-black bg-opacity-95 text-white flex items-center justify-center sd:w-1/2 xz:w-full`}
 					>
 						<nav className="text-2xl font-semibold">
 							<ul className="flex flex-col items-center space-y-6 text-white">
