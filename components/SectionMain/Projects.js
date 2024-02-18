@@ -12,7 +12,7 @@ const Projects = () => {
 				</div>
 			</div>
 
-			<div className='sd:pt-14 xz:pt-10 sd:pl-10 xz:pl-0'>
+			<div className='sd:pt-14 xz:pt-10 sd:pl-10 xz:pl-0 pb-16'>
 				<h4 className='font-bold text-4xl sd:pl-0 xz:pl-2'>
 					Наши проекты
 				</h4>

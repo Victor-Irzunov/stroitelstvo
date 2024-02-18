@@ -23,7 +23,7 @@ const page = () => {
 				<div className='sd:w-[248px] xz:w-14 border-r min-h-screen relative'>
 					<Social />
 
-					<div className='w-8 h-8 bg-primary absolute top-14 right-0' />
+					<div className='w-8 h-8 bg-primary absolute xz:top-14 sd:top-20 right-0' />
 				</div>
 				<div className='pt-40 sd:pl-5 xz:pl-3'>
 					<h1 className='sd:text-7xl xz:text-4xl text-white font-bold'>
