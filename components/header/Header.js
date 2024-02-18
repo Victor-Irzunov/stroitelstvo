@@ -91,7 +91,7 @@ export const Header = () => {
 					>
 						<nav className="text-2xl font-semibold">
 							<ul className="flex flex-col items-center space-y-6 text-white">
-								<li>
+								<li className={`${activeLink === '/' ? 'bg-primary text-black' : ''} px-4 py-1`}>
 									<Link
 										href="/"
 										onClick={toggleMenu}
@@ -99,7 +99,7 @@ export const Header = () => {
 										Главная
 									</Link>
 								</li>
-								<li>
+								<li className={`${activeLink === '/stroitelstvo-domov' ? 'bg-primary text-black' : ''} px-4 py-1`}>
 									<Link
 										href="/stroitelstvo-domov"
 										onClick={toggleMenu}
@@ -107,7 +107,7 @@ export const Header = () => {
 										Строительство
 									</Link>
 								</li>
-								<li>
+								<li className={`${activeLink === '/remont' ? 'bg-primary text-black' : ''} px-4 py-1`}>
 									<Link
 										href="/remont"
 										onClick={toggleMenu}
@@ -115,7 +115,7 @@ export const Header = () => {
 										Ремонт
 									</Link>
 								</li>
-								<li>
+								<li className={`${activeLink === '/dizayin-iterera' ? 'bg-primary text-black' : ''} px-4 py-1`}>
 									<Link
 										href="/dizayin-iterera"
 										onClick={toggleMenu}
@@ -123,7 +123,7 @@ export const Header = () => {
 										Дизайн
 									</Link>
 								</li>
-								<li>
+								<li className={`${activeLink === '/proekty' ? 'bg-primary text-black' : ''} px-4 py-1`}>
 									<Link
 										href="/proekty"
 										onClick={toggleMenu}
@@ -131,7 +131,7 @@ export const Header = () => {
 										Проекты
 									</Link>
 								</li>
-								<li>
+								<li className={`${activeLink === '/kontakty' ? 'bg-primary text-black' : ''} px-4 py-1`}>
 									<Link
 										href="/kontakty"
 										onClick={toggleMenu}
