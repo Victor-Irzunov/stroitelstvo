@@ -28,11 +28,10 @@ const Numbers = () => {
 									10
 								</p>
 								<p className='sd:text-base xz:text-xs'>
-									Лет на рынке
+									Лет <br />на рынке
 								</p>
 							</div>
 						</div>
-
 
 						<div className='flex items-center'>
 							<div className='w-1 sd:h-full xz:h-20 bg-primary sd:ml-5 sd:mr-5 xz:-ml-3 xz:mr-2' />
@@ -45,7 +44,6 @@ const Numbers = () => {
 								</p>
 							</div>
 						</div>
-
 
 						<div className='flex items-center'>
 							<div className='w-1 sd:h-full xz:h-20 bg-primary sd:ml-5 sd:mr-5 xz:-ml-3 xz:mr-2' />

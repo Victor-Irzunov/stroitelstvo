@@ -3,10 +3,12 @@ import Typed from 'typed.js';
 import { useEffect, useRef } from "react";
 import Image from 'next/image';
 import Social from '@/components/social/Social';
-import Numbers from '@/components/section/Numbers';
-import UslugiСonstruction from '@/components/section/UslugiСonstruction';
-import UslugiRemont from '@/components/section/UslugiRemont';
-import Projects from '@/components/section/Projects';
+import Numbers from '@/components/SectionMain/Numbers';
+import UslugiСonstruction from '@/components/SectionMain/UslugiСonstruction';
+import UslugiRemont from '@/components/SectionMain/UslugiRemont';
+import Projects from '@/components/SectionMain/Projects';
+
+
 
 export default function Home() {
   const el = useRef(null)

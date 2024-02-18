@@ -1,8 +1,12 @@
+"use client"
 import Image from "next/image"
+import { usePathname } from 'next/navigation'
 
 export const Footer = () => {
+	const pathname = usePathname()
+
 	return (
-		<footer className="bg-[#1A1A1A] z-50 relative">
+		<footer className={`bg-[#1A1A1A] z-50 relative ${pathname === '/kontakty' ? 'hidden' : 'block'}`}>
 
 			<div className='flex justify-center'>
 				<div className='sd:block xz:hidden w-1/2'>
@@ -89,7 +93,7 @@ export const Footer = () => {
 						</div>
 					</div>
 
-					<div className='w-full mt-10'>
+					<div className='w-full mt-10 sd:block xz:hidden'>
 						<p className='text-[#8C8C8C] text-sm font-semibold mb-4'>
 							Мы на карте
 						</p>
@@ -98,6 +102,13 @@ export const Footer = () => {
 				</div>
 
 
+			</div>
+
+			<div className='w-full sd:mt-10 xz:mt-0 sd:hidden xz:block'>
+				<p className='text-[#8C8C8C] text-sm font-semibold mb-4 pl-8'>
+					Мы на карте
+				</p>
+				<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A00ce747d45bd68a20d38903655600d7de2c396fb51d4288269a59b03895187d0&amp;source=constructor" width="100%" height="300" frameBorder="0"></iframe>
 			</div>
 
 			<aside className="border-t border-black py-2 text-center sd:px-0 xz:px-4">
