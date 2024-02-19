@@ -24,7 +24,7 @@ export const Header = () => {
 	};
 
 	return (
-		<header className="border-b fixed top-0 right-0 left-0 bg-white/40 backdrop-blur-md z-40">
+		<header className="border-b fixed top-0 right-0 left-0 bg-white/40 backdrop-blur-md z-20">
 			<div className='container mx-auto sd:block xz:hidden'>
 				<HeaderInfo />
 				<div className=''>
@@ -36,6 +36,11 @@ export const Header = () => {
 						</div>
 						<div className='pb-2'>
 							<ul className='flex justify-between'>
+								<li className={`ml-7 ${activeLink === '/' ? 'bg-primary' : ''}`}>
+									<Link href='/' className='cursor-pointer py-3 px-3'>
+										Главная
+									</Link>
+								</li>
 								<li className={`ml-7 ${activeLink === '/stroitelstvo-domov' ? 'bg-primary' : ''}`}>
 									<Link href='/stroitelstvo-domov' className='cursor-pointer py-3 px-3'>
 										Строительство
@@ -70,7 +75,9 @@ export const Header = () => {
 			<div className='container mx-auto sd:hidden xz:block py-2'>
 
 				<div className='flex justify-between items-center'>
-					<Image src='/images/logo/logo2.webp' alt='Логотип строительной компании' width={60} height={60} />
+					<Link href='/'>
+						<Image src='/images/logo/logo2.webp' alt='Логотип строительной компании' width={60} height={60} />
+					</Link>
 					<Image
 						src='/images/svg/menu.svg'
 						alt='Меню сайта строительной компании'

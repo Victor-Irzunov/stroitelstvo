@@ -1,7 +1,21 @@
+"use client"
 import Image from "next/image"
-
-
+import { useState } from "react";
+import Modal3 from "../modal3/Modal3";
 const HeaderInfo = () => {
+	const [selectedProduct, setSelectedProduct] = useState(null);
+	const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+
+	const handleOrderClick = (product) => {
+		setSelectedProduct(product);
+		document.getElementById("my_modal_3").showModal();
+	 };
+	 const closeModal = () => {
+		 document.getElementById("my_modal_3").close();
+		 setSelectedProduct(null);
+	 };
+  
+
 	return (
 		<div className="">
 			<div className='container mx-auto'>
@@ -12,7 +26,10 @@ const HeaderInfo = () => {
 					<div
 						className='w-full flex justify-end items-center text-sm text-gray-800 bold pt-1'
 					>
-						<button className="btn btn-primary text-gray-700 btn-sm rounded-none bold">
+						<button
+							className="btn btn-primary text-gray-700 btn-sm rounded-none bold"
+							onClick={() => handleOrderClick('Напишите нам')}
+						>
 							Напишите нам
 						</button>
 
@@ -40,6 +57,13 @@ const HeaderInfo = () => {
 				</div>
 
 			</div>
+			<Modal3
+        selectedProduct={selectedProduct}
+        closeModal={closeModal}
+        isFormSubmitted={isFormSubmitted}
+        setIsFormSubmitted={setIsFormSubmitted}
+      />
+
 		</div>
 	)
 }

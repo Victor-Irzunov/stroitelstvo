@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { BtnComp } from "../btn/BtnComp"
 
 const DesignRoom = () => {
 	return (
@@ -101,9 +102,10 @@ const DesignRoom = () => {
 					</div>
 
 					<div className='flex justify-center mt-5'>
-						<button className="btn btn-primary sd:w-96 xz:w-64 btn-lg shadow-2xl rounded-none mt-0 uppercase">
+						{/* <button className="btn btn-primary sd:w-96 xz:w-64 btn-lg shadow-2xl rounded-none mt-0 uppercase">
 							Заказать проект
-						</button>
+						</button> */}
+						<BtnComp title='Заказать проект' />
 					</div>
 
 				</div>

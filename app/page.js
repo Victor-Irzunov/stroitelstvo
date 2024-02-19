@@ -1,19 +1,34 @@
 "use client"
 import Typed from 'typed.js';
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from 'next/image';
 import Social from '@/components/social/Social';
 import Numbers from '@/components/SectionMain/Numbers';
 import UslugiСonstruction from '@/components/SectionMain/UslugiСonstruction';
 import UslugiRemont from '@/components/SectionMain/UslugiRemont';
 import Projects from '@/components/SectionMain/Projects';
+import Modal from '@/components/modal/Modal';
+import { BtnComp } from '@/components/btn/BtnComp';
 
 
 
 export default function Home() {
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const el = useRef(null)
   const clipRef11 = useRef()
   const typed = useRef(null)
+
+
+  const handleOrderClick = (product) => {
+    setSelectedProduct(product);
+    // document.getElementById("my_modal_3").showModal();
+  };
+  const closeModal = () => {
+    // document.getElementById("my_modal_3").close();
+    setSelectedProduct(null)
+  };
+
 
   useEffect(() => {
     const options = {
@@ -51,7 +66,10 @@ export default function Home() {
             <span className='text-[500px] text-white demotext font-extrabold absolute -top-32 -left-40 -z-10'>
               С
             </span>
-            <button className="btn btn-primary sd:w-72 xz:w-64 btn-md shadow-2xl rounded-none mt-8 absolute sd:top-96 xz:top-72 sd:-left-14 xz:left-0 uppercase">
+            <button
+              className="btn btn-primary sd:w-72 xz:w-64 btn-md shadow-2xl rounded-none mt-8 absolute sd:top-96 xz:top-72 sd:-left-14 xz:left-0 uppercase"
+              onClick={() => handleOrderClick('Получить консультацию')}
+            >
               Получить консультацию
             </button>
           </div>
@@ -95,9 +113,16 @@ export default function Home() {
 
       <Numbers />
 
-      <UslugiСonstruction />
-      <UslugiRemont />
-      <Projects />
+      <UslugiСonstruction  />
+      <UslugiRemont  />
+      <Projects  />
+
+      <Modal
+        selectedProduct={selectedProduct}
+        closeModal={closeModal}
+        isFormSubmitted={isFormSubmitted}
+        setIsFormSubmitted={setIsFormSubmitted}
+      />
     </main>
   );
 }

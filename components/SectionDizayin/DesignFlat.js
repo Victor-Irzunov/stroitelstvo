@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { BtnComp } from "../btn/BtnComp"
 
 const DesignFlat = () => {
 	return (
@@ -82,9 +83,11 @@ const DesignFlat = () => {
 						</div>
 					</div>
 					<div className='flex justify-center mt-8'>
-						<button className="btn btn-primary sd:w-96 xz:w-64 btn-lg shadow-2xl rounded-none mt-0 uppercase">
+						{/* <button className="btn btn-primary sd:w-96 xz:w-64 btn-lg shadow-2xl rounded-none mt-0 uppercase">
 							Рассчитать стоимость
-						</button>
+						</button> */}
+
+						<BtnComp title='Рассчитать стоимость' />
 					</div>
 				</div>
 

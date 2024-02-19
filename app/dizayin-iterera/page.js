@@ -1,12 +1,12 @@
-
-
 import DesignCommerce from "@/components/SectionDizayin/DesignCommerce";
 import DesignFlat from "@/components/SectionDizayin/DesignFlat";
 import DesignHouses from "@/components/SectionDizayin/DesignHouses";
 import DesignRoom from "@/components/SectionDizayin/DesignRoom";
 import StagesDesign from "@/components/SectionDizayin/StagesDesign";
+import { BtnComp } from "@/components/btn/BtnComp";
 import Social from "@/components/social/Social"
 import Image from "next/image"
+
 
 export const metadata = {
 	title: 'Студия дизайна интерьера в Минске',
@@ -17,6 +17,8 @@ export const metadata = {
 };
 
 const page = () => {
+
+
 	return (
 		<main className="">
 			<section className='flex bg-cover min-h-screen' style={{ backgroundImage: 'url("/images/dizayin/fon.avif")' }}>
@@ -31,10 +33,11 @@ const page = () => {
 							интерьеров
 						</span>
 					</h1>
-
+					{/* 
 					<button className="btn btn-primary sd:w-72 xz:w-64 sd:btn-lg xz:btn-md shadow-2xl rounded-none mt-16 uppercase">
 						Напишите нам
-					</button>
+					</button> */}
+					<BtnComp title='Напишите нам' />
 
 				</div>
 			</section>
@@ -59,9 +62,10 @@ const page = () => {
 
 									Мы воплотим в жизнь самые смелые идеи и креативные дизайнерские решения.
 								</p>
-								<button className="btn btn-primary sd:w-72 xz:w-64 btn-lg shadow-2xl rounded-none mt-16 uppercase">
+								{/* <button className="btn btn-primary sd:w-72 xz:w-64 btn-lg shadow-2xl rounded-none mt-16 uppercase">
 									Заказать проект
-								</button>
+								</button> */}
+								<BtnComp title='Заказать проект' />
 							</div>
 						</div>
 					</div>
@@ -108,9 +112,10 @@ const page = () => {
 								<p className='sd:text-lg xz:text-base'>
 									Мы очень дотошны к деталям и ответственны за конечный результат. Закажите дизайн-проект у logo и станьте обладателем дома своей мечты.
 								</p>
-								<button className="btn btn-primary sd:w-72 xz:w-64 btn-lg shadow-2xl rounded-none mt-16 uppercase">
+								{/* <button className="btn btn-primary sd:w-72 xz:w-64 btn-lg shadow-2xl rounded-none mt-16 uppercase">
 									Получить предложение
-								</button>
+								</button> */}
+								<BtnComp title='Получить предложение' />
 							</div>
 						</div>
 					</div>

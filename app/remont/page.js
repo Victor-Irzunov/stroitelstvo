@@ -3,6 +3,7 @@ import Foto from "@/components/SectionRemont/Foto"
 import Portfolio from "@/components/SectionRemont/Portfolio"
 import Stages from "@/components/SectionRemont/Stages"
 import Works from "@/components/SectionRemont/Works"
+import { BtnComp } from "@/components/btn/BtnComp"
 import Social from "@/components/social/Social"
 
 export const metadata = {
@@ -29,9 +30,10 @@ const page = () => {
 						</span>
 					</h1>
 
-					<button className="btn btn-primary sd:w-72 xz:w-64 sd:btn-lg xz:btn-md shadow-2xl rounded-none mt-16 uppercase">
+					{/* <button className="btn btn-primary sd:w-72 xz:w-64 sd:btn-lg xz:btn-md shadow-2xl rounded-none mt-16 uppercase">
 						Напишите нам
-					</button>
+					</button> */}
+					<BtnComp title='Напишите нам' />
 
 				</div>
 			</section>
